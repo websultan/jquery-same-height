@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div class="block">
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text</div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text</div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text Text Text Text Text Text Text</div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-inner">Text Text</div>
+		</div>
+	</div>
+	
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		.block {
+			width: 100%;
+		}
+		.item-wrap {
+			float: left;
+			width: 25%;
+			padding: 15px;
+			border: 1px solid #000;
+			background: #777;
+		}
+		.item-inner {
+			background: #fff;
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #000;
+		}
+
+		@media all and (max-width: 767px) {
+			.item-wrap {
+				width: 100%;
+			}
+		}
+	</style>
+
+	<script src="http://code.jquery.com/jquery-3.0.0.js"></script>
+	<script src="same-height.js"></script>
+	<script>
+		$('.item-inner').sameHeight({
+			widthBreak : 768,
+			byRow: true,
+			resize: true,
+			parentBlock: '.block'
+		});
+		
+	</script>
+</body>
+</html>
